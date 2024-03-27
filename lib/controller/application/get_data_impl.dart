@@ -16,7 +16,7 @@ class GetDataController extends GetxController with StateMixin {
 
     try {
       Response response = await service.getJwelleryData();
-      print(response.statusCode);
+      print(response.data);
       if (response.statusCode == 201 || response.statusCode == 200) {
         List dataList = response.data["data"]["list"];
 
